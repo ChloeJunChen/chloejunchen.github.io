@@ -1,0 +1,765 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background: linear-gradient(135deg, #00d4ff, #0077ff); /* Futuristic gradient */
+    color: white; /* Keeps text color white for readability */
+    padding: 40px; /* Adds more padding for a spacious look */
+    text-align: center;
+    position: relative; /* Allows adding elements like overlays if needed */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds depth */
+}
+
+header h1 {
+    font-size: 3rem; /* Larger font for the title */
+    font-weight: 700; /* Bold for emphasis */
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Adds text glow */
+    margin: 0;
+}
+
+header p {
+    font-size: 1.5rem; /* Larger for subtitle */
+    margin-top: 20px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for clarity */
+    line-height: 1.4; /* Improves readability */
+}
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Adds a subtle dark overlay */
+    z-index: 1; /* Ensures it sits below the text */
+    pointer-events: none; /* Ensures the overlay doesn't block interactions */
+}
+
+header h1, header p {
+    position: relative; /* Ensures text stays above the overlay */
+    z-index: 2;
+}
+
+
+/* h2 Styling (Headings) */
+h2 {
+    font-family: 'Poppins', sans-serif; /* Fashionable and modern font */
+    font-size: 2.2rem; /* Slightly larger for prominence */
+    font-weight: 700; /* Bold for emphasis */
+    color: #ff6b6b; /* Vibrant coral for energy */
+    letter-spacing: 1.5px; /* Clean and spacious appearance */
+    text-transform: uppercase; /* Adds structure */
+    text-align: center; /* Centers heading for balance */
+    background: linear-gradient(90deg, #ff6b6b, #ff9a8b); /* Subtle gradient effect */
+    -webkit-background-clip: text; /* Clips gradient to text */
+    -webkit-text-fill-color: transparent; /* Makes text transparent to show gradient */
+    margin-bottom: 20px;
+    position: relative; /* Allows for decorative elements */
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background-color: #ff6b6b; /* Decorative underline */
+    border-radius: 2px;
+}
+
+/* h3 Styling (Subheadings) */
+h3 {
+    font-family: 'Montserrat', sans-serif; /* Sleek, modern font */
+    font-size: 1.8rem; /* Balanced size */
+    font-weight: 600; /* Semi-bold for elegance */
+    color: #0077ff; /* Cool blue for contrast */
+    text-transform: capitalize; /* Keeps it approachable and less rigid */
+    text-align: left; /* Aligns subheadings to the left */
+    margin-bottom: 15px;
+    border-left: 4px solid #0077ff; /* Stylish accent */
+    padding-left: 10px;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Adds smooth hover effects */
+}
+
+h3:hover {
+    color: #ff9a8b; /* Subtle color change for interaction */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+
+.intro-text {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+ul li {
+    margin-bottom: 20px;
+}
+ul li strong {
+    color: /*#B6D0E2*/#d87c46;
+    font-size: 1.1rem;
+}
+em {
+    font-size: 0.9rem;
+    color: #777;
+    display: block;
+    margin-top: 10px;
+}
+
+.responsive-image {
+    width: 100%; /* Adjusts to the width of the container */
+    height: auto; /* Maintains the aspect ratio */
+    border-radius: 10px; /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+.rectangle-image {
+    width: 100%; /* Makes the image as wide as its container */
+    height: auto; /* Maintains the aspect ratio */
+    aspect-ratio: 16/9; /* Ensures the image has a rectangular aspect ratio (e.g., 16:9) */
+    border-radius: 8px; /* Optional: Adds subtle rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for depth */
+    object-fit: cover; /* Ensures the image scales nicely within the rectangle */
+}
+
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+
+.step {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.visuals img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+button, a.button {
+    display: inline-block;
+    background-color: #B6D0E2;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, a.button:hover {
+    background-color: #003056;
+}
+
+
+/*Intro Section*/
+/* Two Columns Layout */
+.intro.two-columns {
+    display: flex;
+    align-items: center; /* Aligns items vertically when side by side */
+    justify-content: space-between;
+    gap: 20px; /* Adds spacing between columns */
+    padding: 20px;
+}
+
+/* Column Styling */
+.column {
+    flex: 1; /* Ensures both columns adapt to available space */
+}
+
+/* Image Styling */
+.image-column img.rectangle-image {
+    max-height: 350px; /* Adjust the image height */
+    width: 100%; /* Ensure the image scales properly */
+    object-fit: cover; /* Keeps the image aspect ratio */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Responsive Design: Stack Columns for Small Screens */
+@media (max-width: 768px) {
+    .intro.two-columns {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .column {
+        width: 100%; /* Ensure each column takes up the full width */
+        margin-bottom: 20px; /* Add spacing between stacked columns */
+    }
+
+    .image-column img.rectangle-image {
+        max-height: auto; /* Allow the image to scale naturally */
+        margin: 0 auto; /* Center the image horizontally */
+    }
+}
+
+
+/*Key Concepts Section*/
+.key-concepts {
+    padding: 40px;
+    margin: 40px auto; /* Extra spacing to distinguish it from other sections */
+    border-radius: 12px; /* Rounded edges for a polished look */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for separation */
+    border: 1px solid #ddd; /* Light border for subtle emphasis */
+}
+
+
+
+/* Two-Column Layout */
+.two-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive layout */
+    gap: 20px; /* Spacing between columns */
+    align-items: start;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.two-columns .column {
+    padding: 20px;
+}
+
+.two-columns .image-column {
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px; /* Placeholder for images or visuals */
+}
+
+/* Key Concepts Cards */
+.concept-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.concept-card, .horizontal-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/*Hypotheses Section*/
+.hypotheses{
+    padding: 40px;
+    margin: 40px auto; /* Extra spacing to distinguish it from other sections */
+    border-radius: 12px; /* Rounded edges for a polished look */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(0, 69, 124, 0.1);
+
+}
+
+.hypothesis-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.hypothesis-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Combined Methods and Media Section */
+.methods-media {
+    margin: 40px auto;
+    padding: 40px;
+    max-width: 1200px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(0, 69, 124, 0.1);
+}
+
+/* Two-Column Layout */
+.methods-media .two-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px;
+}
+
+/* Columns */
+.methods-media .column {
+    padding: 20px;
+}
+
+/* Workflow Steps */
+.workflow-step {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon Container */
+.icon-container {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.icon-container img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Text Container */
+.text-container {
+    flex: 1;
+}
+
+
+.text-container ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.text-container ul li {
+    margin-bottom: 5px;
+}
+
+/* YouTube Frame Styling */
+iframe {
+    border: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Basic Styling */
+.section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Key Results Section */
+.results {
+    margin: 40px auto;
+    padding: 40px;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(0, 69, 124, 0.1);
+}
+
+/* Two-Column Layout for Results */
+.results .two-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+/* Columns */
+.results .column {
+    padding: 20px;
+}
+
+/* Results Cards */
+.results-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Space between result cards */
+}
+
+.result-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Detailed Link */
+.detailed-link {
+    font-size: 1rem;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.detailed-link a {
+    color: #00457c;
+    text-decoration: underline;
+}
+
+.detailed-link a:hover {
+    color: #d87c46;
+}
+
+
+
+/* Impacts Section */
+.impacts {
+    margin: 40px auto;
+    padding: 40px;
+    max-width: 1200px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(0, 69, 124, 0.1);
+}
+
+/* Two-Column Layout */
+.impacts .two-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Columns */
+.impacts .column {
+    padding: 20px;
+}
+
+/* Impact Cards */
+.impact-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px; /* Add space between cards */
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Text in Impact Cards 
+.impact-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}*/
+
+
+
+/* Back to Main Page Button Styling */
+.back-to-main {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Aligns it on the left */
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif; /* Matches design theme */
+    color: #ffffff;
+    background: linear-gradient(135deg,  #0077ff, #00d4ff); /* Complementary gradient */
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+    display: block; /* Visible by default */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-main:hover {
+    transform: translateY(-5px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg,#0056b3, #0099cc); /* Darker gradient on hover */
+}
+
+/* Keep consistent styling for Back to Top */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Positioned on the right */
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    background: linear-gradient(135deg, #ff6b6b, #ff9a8b);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+    display: none; /* Appears on scroll */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(135deg,  #cc5a5a, #ff7f7f);
+}
+
+
+
+
+
+/*button to hide section (Not in use)*/
+/* Hidden Sections */
+.hidden {
+    display: none;
+}
+
+/* Styling the Down Arrow Container */
+#down-arrow-container {
+    text-align: center; /* Center-aligns the button within the page */
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling the Down Arrow Button */
+.down-arrow {
+    background-color: #E0CD95; /* A trendy coral color for fashionability */
+    color: #ffffff;
+    border: none;
+    padding: 20px;
+    font-size: 2rem;
+    border-radius: 50%; /* Ensures a perfectly round button */
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    animation: bounce 2s infinite;
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hover Effects */
+.down-arrow:hover {
+    background-color: #E0CD95; /* Darker coral on hover */
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Arrow Styling */
+.arrow {
+    font-size: 2.5rem;
+    font-weight: bold;
+    transform: translateY(3px); /* Adjusts vertical alignment of the arrow */
+}
+
+/* Bouncing Animation */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Pulsing Effect Around the Button */
+.down-arrow::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 90px;
+    background-color: rgba(255, 111, 97, 0.3); /* Coral-colored pulse */
+    border-radius: 50%;
+    z-index: -1;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+/* General Styles for Thumbnails */
+/* Flexbox layout for rows */
+.mockup-gallery {
+    display: flex;
+    flex-direction: column; /* Stack rows vertically */
+    gap: 20px; /* Add space between rows */
+}
+
+.thumbnail-row {
+    display: flex; /* Align thumbnails in a row */
+    justify-content: flex-start; /* Replace with "space-between" Spread thumbnails evenly */
+    gap: 20px; /* Add space between thumbnails in the same row */
+}
+
+.thumbnail-item {
+    display: flex;
+    flex-direction: column; /* Stack the image and text */
+    align-items: center; /* Center-align the text below the image */
+}
+
+.thumbnail {
+    width: 200px !important; /* Set consistent thumbnail size */
+    height: 550px !important; /* Use !important to override other rule */
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+
+.thumbnail-caption {
+    margin-top: 8px; /* Add space between the image and the caption */
+    font-size: 14px; /* Set font size for the captions */
+    color: #333; /* Caption text color */
+    text-align: center; /* Center the text below the image */
+}
+
+.thumbnail:hover {
+    opacity: 0.8; /* Add hover effect for better interaction */
+}
+
+
+/*thumbnail for drive tourism*/
+.thumbnail2 {
+    width: 200px !important; /* Set consistent thumbnail size */
+    height: 200px !important; /* Use !important to override other rule */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+.thumbnail2:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Intensify shadow on hover */
+}
+.thumbnail-row2 {
+    display: flex; /* Align thumbnails in a row */
+    justify-content: space-between; /* Replace with "space-between" Spread thumbnails evenly */
+    gap: 20px; /* Add space between thumbnails in the same row */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 5px;
+}
+
+.caption {
+    text-align: center;
+    color: #ccc;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #bbb;
+}
+
+.thumbnail {
+    width: 150px; /* Set the thumbnail width */
+    height: auto; /* Maintain the aspect ratio */
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    transition: opacity 0.3s;
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 20px; /* Adjust position relative to the top */
+    right: 30px; /* Adjust position relative to the right */
+    color: #fff;
+    font-size: 50px; /* Increase the font size for a larger button */
+    font-weight: bold;
+    cursor: pointer; /* Ensure the pointer changes to a hand icon */
+}
+
+.close:hover {
+    color: #bbb; /* Optional: Change color on hover for better visibility */
+    transform: scale(1.2); /* Optional: Slightly enlarge on hover */
+    transition: transform 0.2s ease; /* Smooth hover effect */
+}
+

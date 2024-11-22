@@ -1,0 +1,25 @@
+.notice {
+    margin: 40px auto;
+    max-width: 800px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: center;
+    color: #555;
+}
+
+.notice a {
+    color: #00457c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.notice a:hover {
+    text-decoration: underline;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #00457c;
+    margin-bottom: 20px;
+    text-align: center;
+}

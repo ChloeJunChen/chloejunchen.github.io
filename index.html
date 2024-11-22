@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Chloe's Portfolio</title>
+        <link rel="stylesheet" href="styles.css">
+        <!-- Font Awesome for LinkedIn and Email icons -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+        <!-- Academicons for Google Scholar and Resume icons -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.1/css/academicons.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+        
+    </head>
+</head>
+
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="name">Chloe Jun Chen</h1>
+                <p class="tagline">UX Researcher | PhD Candidate</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/chloe-jun-chen-6a18561ba/" class="icon-button linkedin" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:chloechenjun@gmail.com" class="icon-button email" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=hDTNqygAAAAJ&hl=en&oi=sra" class="icon-button google-scholar" target="_blank" rel="noopener noreferrer">
+                        <i class="ai ai-google-scholar"></i>
+                    </a>
+                    <a href="Chloe_Resume.pdf" class="icon-button resume" target="_blank" rel="noopener noreferrer">
+                        <i class="ai ai-cv"></i>
+                    </a>
+                </div>
+                
+                
+            </div>
+        </div>
+    </header>
+
+
+<section class="about-me">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p class="about-description">
+                    Hi! I’m Chloe—a UX researcher and 5th-year PhD candidate at Purdue University. With a degree in UX Design, a minor in Psychology, and rigorous PhD training, I combine a user-centered mindset with strong research and problem-solving skills. I’m passionate about understanding user needs, designing meaningful experiences, and shaping lives to be easier, happier, and healthier.
+                </p>
+                <p class="about-details">
+                    My research spans walkable urban design, sound design for tour guide apps, website design to evoke luxury or approachability, and generative AI for personalized communication. I use both qualitative and quantitative methods, including user interviews, experiments, statistical modeling, and topic modeling for big data. Through collaborations, publications, and internships, I’ve been fortunate to contribute to impactful UX projects.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="bio_portrait.jpg" alt="Chloe's Portrait">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="phd-projects">
+    <div class="container">
+        <h2>PhD Academic Research</h2>
+        <p>Explore my research-driven projects that address real-world challenges through rigorous UX methodologies.</p>
+        <div id="phdProjectGrid" class="project-grid">
+            <!-- Example PhD projects (First 4 are always visible) -->
+            <div class="project-card">
+                <h3>Sound Design for Tour Guide Apps</h3>
+                <p>Explored how music, voice, and sound effects influence user experience in tour guide applications.</p>
+                <a href="projects/sound-design.html" class="tech-button">Learn More</a>
+            </div>
+            <div class="project-card">
+                <h3>Website Design for Perception</h3>
+                <p>Studied how curvature in website elements, such as corners and fonts, influences user perceptions of luxury and approachability.</p>
+                <a href="projects/website-design.html" class="tech-button">Learn More</a>
+            </div>
+            <div class="project-card">
+                <h3>Walkable Urban Design</h3>
+                <p>Investigated how visual and environmental cues can nudge city tourists toward walkable behaviors.</p>
+                <a href="projects/walkable-design.html" class="low-key-button">Learn More</a>
+            </div>
+            <div class="project-card">
+                <h3>Content Design for a Tour Guide App</h3>
+                <p>Design and research for a more engaging and user-friendly digital tour guide experience.</p>
+                <a href="projects/content-design.html" class="tech-button">Learn More</a>
+            </div>
+            <!-- Hidden projects -->
+            <div class="project-card hidden">
+                <h3>Big Data Analysis with LDA</h3>
+                <p>Used Latent Dirichlet Allocation to identify key themes in large datasets, revealing academic research trends and insights.</p>
+                <a href="projects/lda-analysis.html" class="low-key-button">Learn More</a>
+            </div>
+            
+            <div class="project-card hidden">
+                <h3>Conference Leisure</h3>
+                <p>Cleisure: Investigating how leisure programming enhances conference enjoyment.</p>
+                <a href="projects/conference-leisure.html" class="low-key-button">Learn More</a>
+            </div>
+            <div class="project-card hidden">
+                <h3>Sustainability</h3>
+                <p>Studied the effects of cultural and generational values on pro-environmental behaviors.</p>
+                <a href="projects/sustainability.html" class="low-key-button">Learn More</a>
+            </div>
+        </div>
+        <!-- More/Less Button -->
+        <div class="button-container">
+            <button id="phdLoadMore" class="button load-more">More</button>
+            <button id="phdShowLess" class="button load-less hidden">Less</button>
+        </div>        
+        
+    </div>
+</section>
+
+
+ 
+<section id="ux-coursework">
+    <div class="container">
+        <h2>UX Design Coursework</h2>
+        <p>A collection of design-focused projects completed during my master's in UX Design, showcasing creative problem-solving and prototyping skills.</p>
+        <div class="coursework-toggle">
+            <button id="toggleCoursework" class="low-key-button">Explore</button>
+        </div>
+        <div id="courseworkProjects" class="project-grid hidden">
+            <div class="project-card">
+                <h3>Detect Intruders</h3>
+                <p>An Arduino demo enhancing security with ultrasonic sensors, LEDs, and servo motors.</p>
+                <a href="projects/detect-intruders.html" class="low-key-button">Learn More</a>
+            </div>
+            <div class="project-card">
+                <h3>Travel to Learn</h3>
+                <p>A Unity project highlighting the educational benefits of travel beyond just Instagram-worthy moments.</p>
+                <a href="#" class="low-key-button">Learn More</a>
+            </div>
+            <div class="project-card">
+                <h3>Embodied Shopping Experience</h3>
+                <p>Exploring immersive design solutions for a more engaging online shopping experience.</p>
+                <a href="projects/embodied-shopping.html" class="tech-button"target="_blank" rel="noopener noreferrer">Learn More</a>
+            </div>
+            <div class="project-card">
+                <h3>Inclusive Concert Experience for DHH</h3>
+                <p>Innovative approaches to create inclusive concert experiences for Deaf and Hard of Hearing (DHH) attendees.</p>
+                <a href="#" class="low-key-button">Learn More</a>
+            </div>
+            <div class="project-card">
+                <h3>Redesign Freelancer Review System</h3>
+                <p>Enhancing trust and reliability in freelancing platforms through better review system design.</p>
+                <a href="#" class="low-key-button">Learn More</a>
+            </div>
+            <div class="project-card">
+                <h3>EcoVR</h3>
+                <p>Utilizing VR to educate and engage individuals on environmental issues where conventional methods fall short.</p>
+                <a href="#" class="low-key-button">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="certificates-awards">
+<div class="container">
+    <h2>Certificates and Awards</h2>
+    <p>Explore some of my key recognitions and accomplishments in teaching and research.</p>
+    <div class="awards-content">
+        <!-- Left Column (Certificates) -->
+        <div class="certificates">
+            <h3>Certificates</h3>
+            <ul>
+                <li>
+                    <strong>Foundations of College Teaching:</strong> I learned how to create well-structured, inclusive courses and assess student learning effectively. This program helped me master evidence-based teaching strategies to engage diverse learners and support their academic success.
+                </li>
+                <li>
+                    <strong>Practice of College Teaching:</strong> This hands-on program provided real-world teaching experience, focusing on classroom management, adapting to diverse learners, and reflective teaching. Guided by Dr. Susan Gordon, I enhanced my problem-solving skills and ability to create impactful learning experiences.
+                </li>
+            </ul>
+        </div>
+
+        <!-- Right Column (Awards) -->
+        <div class="awards">
+            <h3>Awards</h3>
+            <ul>
+                <li>
+                    <strong>Outstanding Master Student:</strong> Recognized for exceptional academic performance and contributions to the field of Hospitality and Tourism Management.
+                </li>
+                <li>
+                    <strong>Best Paper Award:</strong> Awarded for the study "Can Colored Sidewalks Nudge People to Walk?" at the 8th International Tourism Studies Association Biennial Conference. Explore the <a href="projects/coloredsidewalk.pdf" target="_blank">original paper</a>.  
+                </li>
+                <li>
+                    <strong>Ross Fellowship:</strong> A prestigious merit-based award from Purdue University, granted to top students for exceptional academic performance and research potential without an application process.
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<section class="skills">
+<div class="container">
+    <h2>Skills and Abilities</h2>
+    <p class="skills-intro">
+        A diverse set of skills  in research, user testing, data synthesis, and technical tools that support my ability to contribute to meaningful and user-centered solutions.
+    </p>
+    <div class="skills-grid">
+        <!-- Qualitative Research -->
+        <div class="skills-card">
+            <h3>Qualitative Research</h3>
+            <ul>
+                <li>In-depth interviews</li>
+                <li>Think-alouds</li>
+                <li>Focus groups</li>
+                <li>Ethnographic studies</li>
+                <li>Content analysis</li>
+                <li>Case studies</li>
+                <li>Thematic analysis</li>
+                <li>Contextual inquiry</li>
+            </ul>
+        </div>
+        <!-- Quantitative Research -->
+        <div class="skills-card">
+            <h3>Quantitative Research</h3>
+            <ul>
+                <li>Surveys</li>
+                <li>Experimental designs</li>
+                <li>ANOVA, ANCOVA, MANOVA</li>
+                <li>t-test</li>
+                <li>Factor Analysis</li>
+                <li>Inferential Statistics</li>
+                <li>Regression modeling</li>
+                <li>Data visualization</li>
+            </ul>
+        </div>
+        <!-- User Testing -->
+        <div class="skills-card">
+            <h3>User Testing</h3>
+            <ul>
+                <li>Usability testing</li>
+                <li>A/B testing</li>
+                <li>Eye-tracking studies</li>
+            </ul>
+        </div>
+        <!-- Data Synthesis -->
+        <div class="skills-card">
+            <h3>Data Synthesis</h3>
+            <ul>
+                <li>Affinity Diagramming</li>
+                <li>Storyboarding</li>
+                <li>Prototyping</li>
+            </ul>
+        </div>
+        <!-- Tools and Technologies -->
+        <div class="skills-card">
+            <h3>Tools and Technologies</h3>
+            <ul>
+                <li>Airtable</li>
+                <li>Arduino</li>
+                <li>Audacity</li>
+                <li>Confluence</li>
+                <li>Contentsquare</li>
+                <li>Figma</li>
+                <li>HTML/CSS</li>
+                <li>R/Stata/SPSS/SAS/Python</li>
+                <li>Usertesting.com</li>
+                <li>Unity Game Engine</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</section>
+
+<script>
+    const phdLoadMore = document.getElementById("phdLoadMore");
+    const phdShowLess = document.getElementById("phdShowLess");
+    const hiddenPhdProjects = document.querySelectorAll("#phdProjectGrid .hidden");
+    // "More" button functionality
+    phdLoadMore.addEventListener("click", () => {
+        hiddenPhdProjects.forEach((card) => {
+            card.classList.remove("hidden");
+        });
+        phdLoadMore.style.display = "none"; // Hide the "More" button
+        phdShowLess.style.display = "inline-block"; // Show the "Less" button
+    });
+
+    // "Less" button functionality
+    phdShowLess.addEventListener("click", () => {
+        hiddenPhdProjects.forEach((card) => {
+            card.classList.add("hidden");
+        });
+        phdShowLess.style.display = "none"; // Hide the "Less" button
+        phdLoadMore.style.display = "inline-block"; // Show the "More" button
+    });
+</script>
+
+
+
+<script>
+    const toggleCoursework = document.getElementById("toggleCoursework");
+    const courseworkProjects = document.getElementById("courseworkProjects");
+
+    toggleCoursework.addEventListener("click", () => {
+        courseworkProjects.classList.toggle("hidden");
+
+        // Update button text
+        if (courseworkProjects.classList.contains("hidden")) {
+            toggleCoursework.textContent = "Explore";
+        } else {
+            toggleCoursework.textContent = "Less";
+        }
+    });
+</script>
+
+
+
+
+
+</body>
+</html>
