@@ -565,4 +565,7 @@ h2 {
     text-align: left;
     width: auto;
 }
+#clustrmaps {
+    display: none; /* Hides the map container */
+}
 
